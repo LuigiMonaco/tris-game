@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #13bdac;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center; /* Centro orizzontalmente */
+    align-items: center; /* Centro verticalmente */
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+
+
+}
+
+.game-panel{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Bungee Spice', cursive;
+    font-size: 120px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    font-family:'Monofett', cursive;
+    font-size: 60px;
+}
+
+.score-sx{
+    display: flex;
+    flex-direction: column;
+}
+
+.victories-x{
+    text-align: center;
+}
+
+.score-dx{
+    display: flex;
+    flex-direction: column;
+}
+
+.victories-O{
+    text-align: center;
+}
+
+
+.icon-X{
+    width: 100px;
+    margin-left: 21%;
+}
+
+
+.icon-O{
+    width: 100px;
+    margin-left: 21%;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.blinking-element {
+    animation: blink 1s infinite;
+}
+
+.game-board{
+    display: flex;
+    justify-content: center;
+
+}
+
+.grid{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+.cell{
+    border: 8px solid black;
+    width: 33.33%; /* Imposta la larghezza delle celle al 33.33% del contenitore (3 celle per riga) */
+    padding-bottom: 33.33%; /* Imposta l'altezza in base alla larghezza per mantenere un rapporto quadrato */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cell:hover,
+.cell-clicked {
+    background-color: #139483;
+}
+
+.end-game-screen{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(66, 222, 163, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.end-game-text{
+    font-family: 'Bungee Spice', cursive;
+    font-size: 90px;
+}
+
+.play-again{
+    font-size: 50px;
+    border: 5px solid black;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+    font-family:'Monofett', cursive;
+    border-radius: 10px;
+
+}
+
+button:hover{
+    background-color: #139483;
+}
+
+.end-round-screen{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(66, 222, 163, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.end-round-text{
+    font-family: 'Bungee Spice', cursive;
+    font-size: 90px;
+}
+
+.play-next-round{
+    font-size: 50px;
+    border: 5px solid black;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+    font-family:'Monofett', cursive;
+    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+}
